@@ -1,0 +1,174 @@
+/* ========= CONTACT.CSS (McKinsey / executive intake form) ========= */
+
+:root{
+  --navy:#031940;
+  --ink:#031940;
+  --muted:rgba(3,25,64,.6);
+  --line:#E5E7EB;
+  --panel:#F9FAFB;
+  --paper:#FFFFFF;
+
+  --radius:14px;
+  --shadow: 0 10px 26px rgba(17,24,39,.08);
+  --shadow-soft: 0 6px 16px rgba(17,24,39,.06);
+}
+
+/* Title block style if you have #welcome elsewhere, harmless if not */
+#join-form{
+  max-width: 760px;
+  margin: 2.75rem auto 1.5rem;
+  padding: 1.4rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle report bar */
+#join-form::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height: 6px;
+  background: linear-gradient(90deg, rgba(3,25,64,.95), rgba(3,25,64,.55));
+}
+
+#join-form h2{
+  font-size: 1.85rem;
+  line-height: 1.2;
+  margin: .25rem 0 1rem;
+  letter-spacing: -.2px;
+}
+
+/* labels */
+#join-form label{
+  display:block;
+  margin-top: 1rem;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+/* required indicator using your attribute selector requirement */
+#join-form input[required],
+#join-form textarea[required]{
+  border-left: 4px solid rgba(3,25,64,.25);
+}
+
+/* inputs */
+#join-form input:not([type="checkbox"]):not([type="radio"]),
+#join-form textarea{
+  width: 100%;
+  margin-top: .35rem;
+  padding: .7rem .8rem;
+
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  transition: border-color .2s ease, box-shadow .2s ease, transform .15s ease;
+}
+
+#join-form textarea{
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* focus looks like a consulting web form */
+#join-form input:focus,
+#join-form textarea:focus{
+  border-color: rgba(3,25,64,.35);
+  box-shadow: 0 0 0 6px rgba(3,25,64,.08);
+  transform: translateY(-1px);
+}
+
+/* radio/checkbox rows */
+#join-form div{
+  margin-top: .5rem;
+  color: #031940;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* tighten radio/checkbox sizing */
+#join-form input[type="radio"],
+#join-form input[type="checkbox"]{
+  width: 16px;
+  height: 16px;
+  accent-color: var(--navy);
+}
+
+/* button row */
+#join-form button{
+  margin-top: 1.25rem;
+  margin-right: .6rem;
+  padding: .7rem 1.1rem;
+
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+
+  font-weight: 650;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease, transform .15s ease;
+}
+
+/* primary action */
+#join-form button[type="submit"]{
+  background: rgba(3,25,64,.08);
+  border-color: rgba(3,25,64,.18);
+  color: var(--navy);
+}
+
+#join-form button:hover{
+  background: #F3F4F6;
+  transform: translateY(-1px);
+}
+
+#join-form button:active{
+  transform: translateY(0);
+}
+
+/* linktree card */
+#linktree{
+  width: min(760px, 92%);
+  margin: 1rem auto 3rem;
+  padding: 1.25rem;
+
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+#linktree p{
+  color: #031940;
+}
+
+#linktree a{
+  display: inline-block;
+  margin-top: .6rem;
+  padding: .55rem 1rem;
+
+  border-radius: 999px;
+  border: 1px solid rgba(3,25,64,.18);
+  background: rgba(255,255,255,.75);
+  text-decoration: none;
+  font-weight: 650;
+  color: var(--navy);
+}
+
+#linktree a:hover{
+  background: rgba(3,25,64,.06);
+}
+
+/* responsive */
+@media (max-width: 520px){
+  #join-form{ padding: 1.1rem; }
+  #join-form h2{ font-size: 1.6rem; }
+}
