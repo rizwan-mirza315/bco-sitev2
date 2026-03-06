@@ -1,0 +1,83 @@
+/* ========= CONTACT.CSS ========= */
+
+:root{
+  --navy:#031940;
+  --ink:#031940;
+  --muted:rgba(3,25,64,.6);
+  --line:#E5E7EB;
+  --panel:#F9FAFB;
+  --paper:#FFFFFF;
+
+  --radius:14px;
+  --shadow: 0 10px 26px rgba(17,24,39,.08);
+  --shadow-soft: 0 6px 16px rgba(17,24,39,.06);
+}
+
+/* linktree card */
+#linktree{
+  width: min(560px, 92%);
+  margin: 3rem auto 2rem;
+  padding: 2rem 1.5rem;
+
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#linktree::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height: 6px;
+  background: linear-gradient(90deg, rgba(3,25,64,.95), rgba(3,25,64,.55));
+}
+
+#linktree p{
+  color: #031940;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+#linktree a{
+  display: inline-block;
+  padding: .75rem 1.5rem;
+
+  border-radius: 999px;
+  border: 1px solid var(--navy);
+  background: var(--navy);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  transition: background-color .2s ease, transform .15s ease;
+}
+
+#linktree a:hover{
+  background: rgba(3,25,64,.85);
+  transform: translateY(-1px);
+}
+
+/* big logo below linktree */
+#join-logo{
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem auto 4rem;
+}
+
+#join-logo img{
+  width: min(420px, 80%);
+  height: auto;
+  object-fit: contain;
+  opacity: .88;
+}
+
+/* responsive */
+@media (max-width: 520px){
+  #linktree{ padding: 1.5rem 1rem; }
+}

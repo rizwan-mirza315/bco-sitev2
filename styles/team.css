@@ -1,0 +1,112 @@
+/* ========= TEAM.CSS (McKinsey / leadership page) ========= */
+
+:root{
+  --navy:#031940;
+  --ink:#031940;
+  --muted:rgba(3,25,64,.6);
+  --line:#E5E7EB;
+  --panel:#F9FAFB;
+  --paper:#FFFFFF;
+
+  --radius:14px;
+  --shadow: 0 10px 26px rgba(17,24,39,.08);
+  --shadow-soft: 0 6px 16px rgba(17,24,39,.06);
+}
+
+/* Grid */
+#team-thanos{
+  margin: 1.25rem 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Card */
+#team-thanos figure{
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+  transition: box-shadow .2s ease, border-color .2s ease, transform .15s ease;
+}
+
+/* name */
+#team-thanos figure h3{
+  font-size: 1.05rem;
+  margin-bottom: .2rem;
+  color: var(--ink);
+  letter-spacing: -.1px;
+}
+
+/* role subtitle */
+#team-thanos figure .team-role{
+  color: #031940;
+  font-size: .875rem;
+  font-weight: 600;
+  margin: 0 0 .75rem;
+}
+
+/* photo */
+#team-thanos figure > img{
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  filter: saturate(1.02) contrast(1.02);
+}
+
+/* linkedin */
+.linkedin-link{
+  display: inline-flex;
+  align-items: center;
+  margin-top: .9rem;
+  opacity: 1;
+  transition: transform .15s ease, filter .15s ease;
+}
+
+.linkedin-link:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+}
+
+.linkedin-logo{
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* subtle hover */
+#team-thanos figure:hover{
+  border-color: rgba(3,25,64,.18);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+/* Make the President card feel primary without being cringe */
+#team-thanos figure:first-child{
+  background: linear-gradient(180deg, rgba(3,25,64,.03), rgba(255,255,255,1));
+  border-color: rgba(3,25,64,.14);
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  #team-thanos{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  #team-thanos figure > img{
+    height: 320px;
+  }
+}
+
+@media (max-width: 620px){
+  #team-thanos{
+    grid-template-columns: 1fr;
+  }
+  #team-thanos figure > img{
+    height: 300px;
+  }
+}

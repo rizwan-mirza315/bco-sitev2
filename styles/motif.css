@@ -1,0 +1,307 @@
+/* ========= MOTIF.CSS (BCO signature waves) ========= */
+
+:root{
+  --navy:#031940;
+  --ink:#031940;
+  --muted:rgba(3,25,64,.6);
+  --line:#E5E7EB;
+  --paper:#FFFFFF;
+  --panel:#F9FAFB;
+
+  --radius:14px;
+  --shadow: 0 10px 26px rgba(17,24,39,.08);
+  --shadow-soft: 0 6px 16px rgba(17,24,39,.06);
+
+  /* Motif asset */
+  --motif: url("../images/bco-blue.png");
+}
+
+/* Motif hero */
+.motif-hero{
+  position: relative;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-top: 1.25rem;
+  background:
+    var(--motif) center/cover no-repeat;
+}
+
+.motif-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  /* darken for readability */
+  background: linear-gradient(90deg,
+    rgba(3,25,64,.92),
+    rgba(3,25,64,.58) 55%,
+    rgba(3,25,64,.35)
+  );
+}
+
+.motif-hero::after{
+  content:"";
+  position:absolute;
+  inset:-40px;
+  /* extra depth so it feels premium */
+  background: radial-gradient(circle at 30% 35%, rgba(255,255,255,.18), transparent 50%),
+              radial-gradient(circle at 78% 62%, rgba(0,170,255,.10), transparent 55%);
+  pointer-events:none;
+}
+
+.motif-hero-inner{
+  position: relative;
+  padding: 2.25rem;
+  min-height: 360px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: .75rem;
+  color: #fff;
+}
+
+.motif-kicker{
+  font-weight: 800;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  font-size: .85rem;
+  opacity: .95;
+}
+
+.motif-title{
+  font-size: clamp(2.1rem, 4.2vw, 3.1rem);
+  line-height: 1.05;
+  letter-spacing: -.6px;
+  font-weight: 900;
+  max-width: 24ch;
+}
+
+.motif-subtitle{
+  max-width: 75ch;
+  color: rgba(255,255,255,.88);
+  font-weight: 560;
+}
+
+.motif-actions{
+  display:flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: .35rem;
+}
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  font-weight: 750;
+  padding: .7rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.10);
+  color:#fff;
+  transition: transform .15s ease, background-color .2s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.16);
+  text-decoration:none;
+}
+
+.btn.primary{
+  background: rgba(255,255,255,.94);
+  color: var(--navy);
+  border-color: rgba(255,255,255,.94);
+}
+
+.btn.primary:hover{
+  background: #fff;
+}
+
+/* Motif band headings */
+.motif-band{
+  position: relative;
+  border-radius: 18px;
+  overflow:hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  background: var(--paper);
+  margin: 2.25rem 0 1.25rem;
+}
+
+.motif-band::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: var(--motif) center/cover no-repeat;
+  opacity: .22;             /* subtle watermark */
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.motif-band::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(90deg, rgba(255,255,255,.92), rgba(255,255,255,.70));
+}
+
+.motif-band-inner{
+  position: relative;
+  z-index: 1;
+  padding: 1.15rem 1.25rem;
+}
+
+.motif-band h2{
+  font-size: 1.6rem;
+  letter-spacing: -.25px;
+  margin-bottom: .25rem;
+}
+
+.motif-band p{
+  color: #031940;
+  max-width: 80ch;
+}
+
+/* Cards with motif corner watermark */
+.grid-3{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card{
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1.15rem;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  top:-70px;
+  right:-70px;
+  width: 220px;
+  height: 220px;
+  background: var(--motif) center/cover no-repeat;
+  opacity: .14;
+  transform: rotate(8deg);
+  pointer-events:none;
+}
+
+.card h3{
+  font-size: 1.05rem;
+  margin-bottom: .35rem;
+  position: relative;
+}
+
+.card p{
+  color: #031940;
+  position: relative;
+}
+
+.card .meta{
+  margin-top: .75rem;
+  color: #031940;
+  font-size: .95rem;
+  font-weight: 650;
+  position: relative;
+}
+
+/* Stats row */
+.stats{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stat{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow:hidden;
+  position: relative;
+}
+
+.stat::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: var(--motif) center/cover no-repeat;
+  opacity: .10;
+  filter: saturate(1.05);
+}
+
+.stat strong, .stat span{
+  position: relative;
+}
+
+.stat strong{
+  display:block;
+  font-size: 1.55rem;
+  color: var(--navy);
+  letter-spacing: -.2px;
+}
+
+.stat span{
+  color: #031940;
+  font-weight: 700;
+}
+
+/* Motif footer (subtle) */
+footer{
+  position: relative;
+  overflow:hidden;
+}
+
+footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: var(--motif) center/cover no-repeat;
+  opacity: .10;
+  filter: saturate(1.05) contrast(1.05);
+  pointer-events:none;
+}
+
+footer > *{
+  position: relative;
+}
+
+/* Light-context buttons (outside the dark hero) */
+.btn-light{
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+.btn-light:hover{
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.btn-light.primary{
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+.btn-light.primary:hover{
+  background: rgba(3,25,64,.88);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .grid-3{ grid-template-columns: 1fr; }
+  .stats{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .motif-hero-inner{ min-height: 330px; padding: 1.6rem; }
+}
+
+@media (max-width: 520px){
+  .stats{ grid-template-columns: 1fr; }
+}
