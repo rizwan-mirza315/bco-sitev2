@@ -12,6 +12,22 @@
   --shadow-soft: 0 6px 16px rgba(17,24,39,.06);
 }
 
+/* MRU banner image */
+#mru-banner{
+  margin: 2rem 0 0;
+  line-height: 0;
+}
+#mru-banner img{
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
 /* tighten overall page rhythm */
 #Us{
   margin: 2.25rem 0 1.75rem;
@@ -39,20 +55,6 @@
   background: linear-gradient(90deg, rgba(3,25,64,.95), rgba(3,25,64,.55));
 }
 
-/* float image right but make it feel premium */
-/* Fix portrait image compression */
-#Us img{
-  float: right;
-  width: min(360px, 52%);
-  height: 320px;              /* force consistent height */
-  object-fit: cover;          /* crop instead of squish */
-  object-position: center;    /* center crop */
-
-  margin: .25rem 0 1rem 1.25rem;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-soft);
-}
 #Us h2{
   font-size: 1.55rem;
   line-height: 1.2;
@@ -64,7 +66,6 @@
 /* text looks like an exec brief */
 #Us p{
   color: #031940;
-  max-width: 75ch;
   margin-bottom: .75rem;
 }
 #Us p:last-of-type{
@@ -181,9 +182,7 @@
   .events-grid article{
     grid-template-columns: 1fr;
   }
-  #Us img{
-    float: none;
-    width: 100%;
-    margin: 0 0 1rem 0;
+  #mru-banner img{
+    height: 220px;
   }
 }
