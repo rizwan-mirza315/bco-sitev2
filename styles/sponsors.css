@@ -145,6 +145,67 @@
   border-bottom: none;
 }
 
+/* ---- Tier comparison table (Intro to Consulting) ---- */
+.tier-table-wrap{
+  overflow-x: auto;
+}
+
+.tier-table{
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.tier-table th,
+.tier-table td{
+  padding: .75rem .9rem;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+  color: #031940;
+  font-size: .92rem;
+}
+
+.tier-table th:first-child,
+.tier-table td:first-child{
+  text-align: left;
+  font-weight: 650;
+}
+
+.tier-table thead th{
+  background: var(--navy);
+  color: #fff;
+  font-weight: 750;
+}
+
+.tier-table thead th:first-child{
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.tier-table tbody tr:nth-child(even){
+  background: #FCFCFD;
+}
+
+.tier-table tbody tr:last-child td{
+  border-bottom: none;
+}
+
+.tier-table tfoot td{
+  background: var(--navy);
+  color: #fff;
+  font-weight: 800;
+  border-bottom: none;
+}
+
+.tier-table tfoot td:first-child{
+  background: rgba(3,25,64,.9);
+}
+
 /* responsive */
 @media (max-width: 900px){
   .partners-grid{

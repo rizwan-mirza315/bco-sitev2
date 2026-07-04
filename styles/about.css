@@ -72,16 +72,6 @@
   margin-bottom: 0;
 }
 
-/* first-letter requirement, but restrained */
-#Us p:first-of-type::first-letter{
-  font-size: 2.05rem;
-  font-weight: 800;
-  color: var(--navy);
-  float: left;
-  line-height: 1;
-  padding-right: .12em;
-}
-
 /* link to section looks like a report cross-reference */
 #Us a{
   color: var(--navy);
@@ -131,6 +121,13 @@
 .events-grid p{
   color: #031940;
   line-height: 1.6;
+}
+
+.events-grid .event-meta{
+  font-size: .85rem;
+  font-weight: 650;
+  color: var(--muted);
+  margin-top: -.25rem;
 }
 
 /* right-side image: consistent ratio and clean border */
