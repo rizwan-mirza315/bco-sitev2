@@ -21,7 +21,10 @@
       <h1>Bissett Consulting Organization</h1>
     </div>
     <nav aria-label="Primary">
-      <ul>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="primary-nav">
         <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="sponsors.html">Sponsors</a></li>
@@ -37,9 +40,6 @@
       <div class="motif-hero-inner">
         <div class="motif-kicker">Mount Royal University</div>
         <div class="motif-title">Where ideas meet impact.</div>
-        <p class="motif-subtitle">
-          Student-run consulting and strategy community entering its second year at MRU. We train structured thinking through workshops, competitions, and industry-facing events, now with a growing focus on AI in consulting.
-        </p>
         <div class="motif-actions">
           <a class="btn primary" href="contact.html">Apply to join</a>
           <a class="btn" href="sponsors.html">Become a sponsor</a>
@@ -65,15 +65,26 @@
     <section class="motif-band" aria-label="BCO summary">
       <div class="motif-band-inner">
         <h2>At a glance</h2>
-        <p>Clear outcomes, not vague club vibes.</p>
       </div>
     </section>
 
     <section class="stats" aria-label="BCO stats">
-      <div class="stat"><strong>4</strong><span>Core events</span></div>
-      <div class="stat"><strong>30</strong><span>Members in year one</span></div>
-      <div class="stat"><strong>2025</strong><span>Founded</span></div>
-      <div class="stat"><strong>MRU</strong><span>Bissett School of Business</span></div>
+      <details class="stat">
+        <summary><span class="stat-head"><strong>4</strong><span>Core events</span></span></summary>
+        <p class="stat-detail">Add more detail here.</p>
+      </details>
+      <details class="stat">
+        <summary><span class="stat-head"><strong>30</strong><span>Members in year one</span></span></summary>
+        <p class="stat-detail">Add more detail here.</p>
+      </details>
+      <details class="stat">
+        <summary><span class="stat-head"><strong>2025</strong><span>Founded</span></span></summary>
+        <p class="stat-detail">Add more detail here.</p>
+      </details>
+      <details class="stat">
+        <summary><span class="stat-head"><strong>MRU</strong><span>Bissett School of Business</span></span></summary>
+        <p class="stat-detail">Add more detail here.</p>
+      </details>
     </section>
 
     <!-- Value props -->
@@ -85,23 +96,23 @@
     </section>
 
     <section class="grid-3" aria-label="BCO pillars">
-      <div class="card">
-        <h3>Skill building</h3>
+      <details class="card">
+        <summary><h3>Skill building</h3></summary>
         <p>Hands-on workshops teaching structured analysis and strong recommendations.</p>
         <div class="meta">Beginner friendly, high standards.</div>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>Competition experience</h3>
+      <details class="card">
+        <summary><h3>Competition experience</h3></summary>
         <p>Real case pressure: constraints, teamwork, and judging.</p>
         <div class="meta">Learn to perform under time.</div>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>Professional exposure</h3>
+      <details class="card">
+        <summary><h3>Professional exposure</h3></summary>
         <p>Speaker sessions and sponsor touchpoints that build industry context.</p>
         <div class="meta">Network with purpose.</div>
-      </div>
+      </details>
     </section>
 
   </main>
@@ -110,5 +121,7 @@
     <p>Bissett Consulting Organization &middot; Mount Royal University</p>
     <p>&copy; 2026 BCO. All rights reserved.</p>
   </footer>
+
+  <script src="scripts/nav.js" defer></script>
 </body>
 </html>

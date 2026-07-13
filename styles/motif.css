@@ -40,16 +40,6 @@
   );
 }
 
-.motif-hero::after{
-  content:"";
-  position:absolute;
-  inset:-40px;
-  /* extra depth so it feels premium */
-  background: radial-gradient(circle at 30% 35%, rgba(255,255,255,.18), transparent 50%),
-              radial-gradient(circle at 78% 62%, rgba(0,170,255,.10), transparent 55%);
-  pointer-events:none;
-}
-
 .motif-hero-inner{
   position: relative;
   padding: 2.25rem;
@@ -118,37 +108,15 @@
   background: #fff;
 }
 
-/* Motif band headings */
+/* Section headings: plain divider, no box */
 .motif-band{
-  position: relative;
-  border-radius: 18px;
-  overflow:hidden;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-soft);
-  background: var(--paper);
-  margin: 2.25rem 0 1.25rem;
-}
-
-.motif-band::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: var(--motif) center/cover no-repeat;
-  opacity: .22;             /* subtle watermark */
-  filter: saturate(1.05) contrast(1.05);
-}
-
-.motif-band::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(90deg, rgba(255,255,255,.92), rgba(255,255,255,.70));
+  margin: 2.75rem 0 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
 }
 
 .motif-band-inner{
-  position: relative;
-  z-index: 1;
-  padding: 1.15rem 1.25rem;
+  padding: 0;
 }
 
 .motif-band h2{
@@ -162,7 +130,6 @@
   max-width: 80ch;
 }
 
-/* Cards with motif corner watermark */
 .grid-3{
   display:grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -170,37 +137,17 @@
 }
 
 .card{
-  position: relative;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
-  padding: 1.15rem;
-  overflow:hidden;
-}
-
-.card::before{
-  content:"";
-  position:absolute;
-  top:-70px;
-  right:-70px;
-  width: 220px;
-  height: 220px;
-  background: var(--motif) center/cover no-repeat;
-  opacity: .14;
-  transform: rotate(8deg);
-  pointer-events:none;
+  padding-top: .9rem;
+  border-top: 2px solid var(--navy);
 }
 
 .card h3{
   font-size: 1.05rem;
   margin-bottom: .35rem;
-  position: relative;
 }
 
 .card p{
   color: #031940;
-  position: relative;
 }
 
 .card .meta{
@@ -208,36 +155,18 @@
   color: #031940;
   font-size: .95rem;
   font-weight: 650;
-  position: relative;
 }
 
 /* Stats row */
 .stats{
   display:grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .stat{
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1rem;
-  overflow:hidden;
-  position: relative;
-}
-
-.stat::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: var(--motif) center/cover no-repeat;
-  opacity: .10;
-  filter: saturate(1.05);
-}
-
-.stat strong, .stat span{
-  position: relative;
+  padding-top: .75rem;
+  border-top: 2px solid var(--navy);
 }
 
 .stat strong{

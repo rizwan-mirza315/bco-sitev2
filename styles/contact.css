@@ -13,29 +13,12 @@
   --shadow-soft: 0 6px 16px rgba(17,24,39,.06);
 }
 
-/* linktree card */
 #linktree{
   width: min(560px, 92%);
   margin: 3rem auto 2rem;
-  padding: 2rem 1.5rem;
-
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--navy);
   text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-#linktree::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height: 6px;
-  background: linear-gradient(90deg, rgba(3,25,64,.95), rgba(3,25,64,.55));
 }
 
 #linktree p{

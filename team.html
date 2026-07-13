@@ -19,7 +19,10 @@
       <h1>Bissett Consulting Organization</h1>
     </div>
     <nav aria-label="Primary">
-      <ul>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="primary-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="sponsors.html">Sponsors</a></li>
@@ -50,7 +53,6 @@
     <section class="motif-band" aria-label="Executive team">
       <div class="motif-band-inner">
         <h2>Executive team</h2>
-        <p>Each role is built to drive a specific part of the BCO mission.</p>
       </div>
     </section>
 
@@ -118,5 +120,7 @@
     <p>Bissett Consulting Organization &middot; Mount Royal University</p>
     <p>&copy; 2026 BCO. All rights reserved.</p>
   </footer>
+
+  <script src="scripts/nav.js" defer></script>
 </body>
 </html>

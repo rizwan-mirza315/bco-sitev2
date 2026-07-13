@@ -13,54 +13,6 @@
   --shadow-soft: 0 6px 16px rgba(17,24,39,.06);
 }
 
-/* ---- Current partners ---- */
-#current-partners{
-  margin: 0;
-}
-
-.partners-grid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.partner-card{
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
-  padding: 1.35rem 1.2rem 1.15rem;
-  transition: box-shadow .2s ease, transform .15s ease;
-}
-
-.partner-card:hover{
-  box-shadow: var(--shadow);
-  transform: translateY(-2px);
-}
-
-.partner-logo{
-  display: block;
-  max-height: 52px;
-  max-width: 140px;
-  width: auto;
-  object-fit: contain;
-  object-position: left center;
-  margin-bottom: .85rem;
-}
-
-.partner-label{
-  font-size: .875rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: .4rem;
-}
-
-.partner-desc{
-  color: #031940;
-  font-size: .875rem;
-  margin: 0;
-}
-
 /* ---- Per-event sections ---- */
 .event-section{
   margin: 0 0 0;
@@ -74,12 +26,8 @@
 }
 
 .event-stat{
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1rem 1.1rem;
-  position: relative;
-  overflow: hidden;
+  padding-top: .75rem;
+  border-top: 2px solid var(--navy);
 }
 
 .event-stat strong{
@@ -105,7 +53,6 @@
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
   margin-bottom: 0;
 }
 
@@ -158,7 +105,6 @@
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
 }
 
 .tier-table th,
@@ -208,9 +154,6 @@
 
 /* responsive */
 @media (max-width: 900px){
-  .partners-grid{
-    grid-template-columns: 1fr;
-  }
   .event-stats{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }

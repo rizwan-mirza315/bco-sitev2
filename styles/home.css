@@ -35,17 +35,8 @@
   letter-spacing: .1px;
 }
 
-/* Image card */
 #teampic{
   margin: 1.25rem 0 3rem;
-}
-
-#teampic figure{
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 1rem;
-  box-shadow: var(--shadow);
 }
 
 #teampic img{
@@ -53,6 +44,7 @@
   height: min(460px, 56vw);
   object-fit: cover;
   border-radius: 12px;
+  border: 1px solid var(--line);
   display: block;
 }
 
@@ -64,18 +56,59 @@
   line-height: 1.35;
 }
 
-/* Small “deck polish” on hover, very subtle */
-#teampic figure:hover{
-  border-color: rgba(3,25,64,.18);
-  box-shadow: 0 14px 32px rgba(17,24,39,.10);
+/* Dropdown cards ("What we do" + "At a glance") */
+.stats .stat,
+.grid-3 .card{
+  padding-bottom: .1rem;
+}
+
+.stats summary,
+.grid-3 summary{
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: .35rem;
+}
+
+.stats summary::-webkit-details-marker,
+.grid-3 summary::-webkit-details-marker{
+  display: none;
+}
+
+.stats summary::after,
+.grid-3 summary::after{
+  content: "+";
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.stats details[open] summary::after,
+.grid-3 details[open] summary::after{
+  content: "\2212";
+}
+
+.grid-3 summary h3{
+  margin-bottom: 0;
+}
+
+.stat-head{
+  display: block;
+}
+
+.stats .stat-detail{
+  color: #031940;
+  font-size: .9rem;
+  margin-top: .75rem;
 }
 
 /* Responsive tightening */
 @media (max-width: 520px){
   #welcome{
     padding: 2rem 0 1rem;
-  }
-  #teampic figure{
-    padding: .85rem;
   }
 }
